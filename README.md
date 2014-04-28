@@ -1,7 +1,7 @@
 tabletop-utils
 ==============
 
-Scripts to make playing D&amp;D and other tabletop games easier
+PHP scripts to make playing D&amp;D and other tabletop games easier
 
 <b>Current Files:</b><br/>
 
