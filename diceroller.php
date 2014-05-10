@@ -14,12 +14,12 @@ while(true){
 
     # Parse the string to make sure it looks right
     if(isset($roll)) unset($roll); $roll = array();
-    if(preg_match_all('(([0-9]+)(d)([0-9]+)(([\+\-])([0-9]+)){0,1})',$string,$roll)){
+    if(preg_match('(([0-9]+)(d)([0-9]+)(([\+\-])([0-9]+)){0,1})',$string,$roll)){
         # Set up the array we'll use to store our rolls
         if(isset($dice)) unset($dice); $dice = array();
 
         #Roll the dice and store them in the array
-        for($i=0;$i<$roll[1][0];$i++){$dice[$i] = mt_rand(1,$roll[3][0]);}
+        for($i=0;$i<$roll[1];$i++){$dice[$i] = mt_rand(1,$roll[3]);}
 
         # Display the individual rolls and calculate the total
         print 'Individual rolls: ';
@@ -33,8 +33,8 @@ while(true){
         print PHP_EOL.'Total: '.$total.PHP_EOL;
 
         # Display the modified total (if applicable)
-        if(isset($roll[4][0]) && $roll[4][0]!= ''){
-            print 'Modified total: '.($total+$roll[4][0]).PHP_EOL;
+        if(isset($roll[4]) && $roll[4]!= ''){
+            print 'Modified total: '.($total+$roll[4]).PHP_EOL;
         }
 
         # New lines before next iteration
