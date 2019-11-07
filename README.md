@@ -6,10 +6,12 @@ Scripts and programs to make playing D&amp;D and other tabletop games easier
 <b>Current Files:</b><br/>
 
 <b>extest.php</b><br/>
-Used to make an extended test. In D&amp;D and other systems, an extended test is accomplished by rolling a d20 and if the result is greater than 15, adding that number minus 15 to a pool. When that pool reached a target number, the test is considered complete, and the number of times the die was rolled is the number of rounds/days/minutes/whatever it took to complete.
-
-<b>diceroller.php</b><br/>
-A generic diceroller. It handles xdx[[+/-]x]. I really shouldn't have to explain this.
+In many tabletop games, an extended test is a challenge requiring many days to 
+complete. The game master will set a target number to complete the task. The player
+will then roll a twenty-sided die (d20), and subtract fifteen. If this value is
+greater than zero, it is added to the running total. When the total reaches or
+exceeds the target set by the game master, the task is complete. An optional modifier
+may be specified to increase or decrease the difficulty of the task.
 
 <b>hits.php</b><br/>
 Used to count hits for a given dice pool in Shadowrun.
